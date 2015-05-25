@@ -1,0 +1,26 @@
+{
+  "name": "muse",
+  "version": "1.0.0",
+  "description": "Muse CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^1.2.0",
+    "gulp": "^3.8.11",
+    "gulp-debug": "^2.0.1",
+    "gulp-inject": "^1.2.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tsd": "0.0.4",
+    "gulp-tslint": "^3.0.1-beta",
+    "gulp-typescript": "^2.7.5",
+    "tsd": "^0.6.0"
+  },
+  "dependencies": {
+    "docopt": "^0.6.2",
+    "js-yaml": "^3.3.1"
+  }
+}

@@ -1,0 +1,5 @@
+#!/bin/bash
+
+MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+/usr/bin/env node $MYDIR/../src/js/app.js $*
