@@ -1,5 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env node
 
-MYDIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+var path = require('path');
+var fs   = require('fs');
+var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '..');
 
-/usr/bin/env node $MYDIR/../src/js/app.js $*
+require(lib + '/src/js/app.js');
