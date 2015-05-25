@@ -4,4 +4,4 @@ var path = require('path');
 var fs   = require('fs');
 var lib  = path.join(path.dirname(fs.realpathSync(__filename)), '..');
 
-require(lib + '/src/js/app.js');
+require(lib + '/build/release/app.js');

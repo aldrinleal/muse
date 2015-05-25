@@ -4,15 +4,15 @@
 import docopt = require("docopt");
 
 export class CLIParser {
-    public static USAGE: string = `muse.
+    public static USAGE: string = `muses.
 
 Usage:
-  muse [options] init
-  muse [options] run
-  muse [options] start
-  muse [options] stop
-  muse [options] status
-  muse help <COMMAND>
+  muses [options] init
+  muses [options] run
+  muses [options] start
+  muses [options] stop
+  muses [options] status
+  muses help <COMMAND>
 
 Options:
   -v,--verbose            Turn on verbose [default: false]
