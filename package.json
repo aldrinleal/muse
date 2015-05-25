@@ -1,13 +1,24 @@
 {
   "name": "muse",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Muse CLI",
   "main": "index.js",
   "scripts": {
     "test": "gulp build"
   },
-  "author": "",
-  "license": "ISC",
+  "preferGlobal": true,
+  "author": {
+    "name": "Aldrin Leal",
+    "email": "aldrin+npmjs@leal.eng.br"
+  },
+  "bin": {
+    "muse": "./bin/muse"
+  },
+  "licenses": "APSL2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/aldrinleal/muse.git"
+  },
   "devDependencies": {
     "del": "^1.2.0",
     "gulp": "^3.8.11",
