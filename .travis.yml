@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - "iojs-v2.0.0"
+- iojs-v2.0.0
+deploy:
+  provider: npm
+  email: aldrin+npmjs@leal.eng.br
+  api_key:
+    secure: HlJ1RxstRLObllG1fzlmtVH9dONPfqV2q+HqNgIlAaVydnN25iEpebHifmr82Xf/PPbupDg7EDJCKXTDw6K7XoN9IFuBk0nXWfMnc89idcBsapSxE/jGIa3eHz6L7yb/g+hsIvROlgpha4KNpd6Z+0iUphpf92hlaD9SCrDWNB7LEI0iQAg2jbF6cwIXPh6CR/dR+g/FpQK/n7ROit9P8q3H94ddAbz37frWL/NLlfNRPjhagq4+LyoO0vsy8ZvTeHDG2YLrnYyDPb+Zw79e2icXWVEUysuCESu33qCbmI5xlUFOF3YhXRpC3Yo6UDqS4ZxTHbhRto0KsM6RB+uBkigSi1rBqyutQnghXIbIQHBKyRTyuX/R5jDWrmG2GTfWAxDcIQffP3/QXIklBC4CjT1GYjQ6gLGrFPDj+gs4iaCd3oolMuQH/KLrq6HRMHOmkty1mFUNSUaEfRj5L4UsBgEbEm+N3JZK3XPi+g+i1ijPyUZ8xHSX9WKXu4DpimBG8q+VnhW6ep4Iij287SyihRGabfP5ZvLDXaWc0X0LQ2tf/+S2sIb0dA4xs6E3keeI4i+nrsYzar0CTb2CxA603NUwiq4RN+g82hkmqHptCPMk+duWF0L8Yjd5aagc+wxvkkdicZybM5JHeqgXGrlrkMo5WNafFThnBbgnbBy8yX0=
+  on:
+    tags: true
+    repo: aldrinleal/muse
