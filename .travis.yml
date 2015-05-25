@@ -3,7 +3,8 @@ node_js:
 - iojs-v2.0.0
 before_install:
 - npm install -g npm@latest
-- npm login
+- npm config set //registry.npmjs.org/:_authToken $NPM_TOKEN
+- npm whoami
 deploy:
   provider: npm
   email: aldrin+npmjs@leal.eng.br
