@@ -3,18 +3,38 @@
   "version": "0.0.1",
   "description": "Muse CLI",
   "main": "index.js",
+  "homepage": "https://github.com/aldrinleal/muse/",
+  "bugs": {
+    "url": "https://github.com/aldrinleal/muse/issues"
+  },
+  "contributors": [
+    {
+      "name": "Richard Tibbetts",
+      "email": "tibbetts@thatmodernfreemailprovider.com"
+    }
+  ],
   "scripts": {
     "test": "gulp build"
   },
+  "keywords": [
+    "testing",
+    "services",
+    "mocking"
+  ],
   "preferGlobal": true,
-  "author": {
-    "name": "Aldrin Leal",
-    "email": "aldrin+npmjs@leal.eng.br"
-  },
+  "author": "Aldrin Leal <aldrin+npmjs@leal.eng.br>",
   "bin": {
     "muse": "./bin/muse"
   },
-  "licenses": "APSL2",
+  "engines": {
+    "iojs": ">= 2.0.0"
+  },
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "https://spdx.org/licenses/Apache-2.0.html#licenseText"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/aldrinleal/muse.git"
