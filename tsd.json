@@ -10,6 +10,9 @@
     },
     "js-yaml/js-yaml.d.ts": {
       "commit": "c2b70ba731a485968fa3e0561a32652f59787015"
+    },
+    "tspromise/tspromise.d.ts": {
+      "commit": "ed6baae5e39c06077f9094bd80d1cfe1a997f50e"
     }
   }
 }

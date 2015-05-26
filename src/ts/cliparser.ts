@@ -1,7 +1,7 @@
 /// <reference path="../../typings/node/node.d.ts" />
 /// <reference path="../../typings/docopt/docopt.d.ts" />
 
-import docopt = require("docopt");
+import docopt = require("docopt")
 
 export class CLIParser {
     public static USAGE: string = `muses.
@@ -20,11 +20,9 @@ Options:
 `;
 
     parse(args?:Array<string>) {
-        var parsed_args = docopt.docopt(CLIParser.USAGE, {options_first: true});
+        var parsed_args = docopt.docopt(CLIParser.USAGE, {options_first: true})
 
-        console.log("parsed_args", parsed_args);
-
-        return parsed_args;
+        return parsed_args
     }
 }
 

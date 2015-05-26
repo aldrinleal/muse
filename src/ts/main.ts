@@ -1,48 +1,75 @@
 /// <reference path="../../typings/node/node.d.ts" />
 
 import cliparser = require("./cliparser");
-
-import ctx = require("./context");
+import Promise = require("tspromise")
+import model = require("./model");
+import context = require("./context");
+import fs = require("fs");
 
 export class Main {
-    ctx: ctx.Context;
+    ctx: context.Context
+    
+    constructor(newContext: context.Context) {
+        
+        this.ctx = newContext
+    }
 
     cmd_init() {
-        console.log("cmd_init()");
+        var templateContent = model.Configuration.generateTemplate()
+
+        console.log(this.ctx.ready)
+        console.dir(this.ctx.ready)
+        //var configFile = this.ctx.ready.then.value()
+
+        //fs.writeFile(configFile, templateContent)
+
+        //console.log(`Configuration skeleton written into ${configFile}`)
     }
 
     cmd_install() {
-        console.log("cmd_install()");
+        console.log("cmd_install()")
     }
 
-    execute() {
-        var cliParser = new cliparser.CLIParser();
+    static create(args = process.argv) {
+        var cliParser = new cliparser.CLIParser()
 
-        var args = cliParser.parse(process.argv);
+        var parsed_args = cliParser.parse(process.argv)
 
-        this.ctx = new ctx.Context({
+        var newCtx = new context.Context({
             verbose: <boolean>args["--verbose"],
             directory: <string>args["--directory"],
-        });
+            args: parsed_args
+        })
 
-        var commandToCall: any;
+        var result = new Main(newCtx)
+        
+        // console.log("create()", result)
+        
+        return result
+    }
 
-        for (var key in args) {
-            var functionName = `cmd_${ key }`;
+    /***
+     * Method/call Dispatcher
+     */
+    execute() {
+        var commandToCall: any
 
-            var commandMatched = 'function' === typeof Main.prototype[functionName];
+        for (var key in this.ctx.args) {
+            var functionName = `cmd_${ key }`
+
+            var commandMatched = 'function' === typeof Main.prototype[functionName]
 
             if (commandMatched) {
-                commandToCall = Main.prototype[functionName];
+                commandToCall = Main.prototype[functionName]
 
-                break;
+                break
             }
         }
 
         if (commandToCall) {
-            commandToCall();
+            commandToCall()
         } else {
-            throw new Error("Command not implemented!");
+            throw new Error("Command not implemented!")
         }
     }
 }

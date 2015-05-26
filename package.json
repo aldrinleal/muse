@@ -53,6 +53,9 @@
   },
   "dependencies": {
     "docopt": "^0.6.2",
-    "js-yaml": "^3.3.1"
+    "fs-extra": "^0.18.4",
+    "immutable": "^3.7.3",
+    "js-yaml": "^3.3.1",
+    "tspromise": "0.0.5"
   }
 }
